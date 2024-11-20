@@ -1,0 +1,117 @@
+/* Tabla de tareas */
+.task-table {
+    width: 100%; /* La tabla ocupa el ancho completo */
+    table-layout: fixed; /* Asegura que las columnas tengan un tamaño fijo */
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 16px;
+}
+
+.task-table td {
+    word-wrap: break-word; /* Permite que las palabras largas se dividan */
+    word-break: break-word; /* Fuerza el ajuste si es necesario */
+    white-space: normal; /* Permite que el texto envuelva en múltiples líneas */
+}
+
+.task-table tr th {
+    text-align: center;
+}
+
+/* Ancho específico por columna */
+.col-asunto {
+    width: 20%;
+    text-align: left;
+}
+
+.col-observaciones {
+    width: 45%;
+    text-align: left;
+}
+
+.col-prioridad {
+    width: 8%;
+    text-align: center;
+}
+
+.col-fecha {
+    width: 12%;
+    text-align: center;
+}
+
+.col-estado {
+    width: 5%;
+    text-align: center;
+}
+
+.col-acciones {
+    width: 10%;
+    text-align: center;
+}
+
+/* Encabezados de la tabla */
+.task-table thead th {
+    background-color: #f4f4f4;
+    color: #333;
+    font-weight: bold;
+    padding: 10px;
+    border-bottom: 2px solid #ddd;
+}
+
+/* Filas de la tabla */
+.task-table tbody tr {
+    border-bottom: 1px solid #ddd;
+    transition: background-color 0.3s ease; /* Transición para el cambio de color */
+}
+
+/* Fila completada */
+.completed-row {
+    background-color: #e0e0e0; /* Color de fondo oscuro */
+    color: #666; /* Color del texto */
+}
+
+/* Checkbox */
+.custom-checkbox {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    accent-color: green;
+    text-align: center;
+}
+
+/* Botones de acción */
+.task-table td button {
+    width: 75px;
+    padding: 5px 10px;
+    font-size: 14px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    transition: background-color 0.2s ease;
+}
+
+.task-table td button:hover {
+    background-color: #0056b3;
+}
+
+/* Botón eliminar */
+.task-table td button:last-child {
+    background-color: #dc3545;
+}
+
+.task-table td button:last-child:hover {
+    background-color: #a71d2a;
+}
+
+/* Botón deshabilitado */
+.disabled-button {
+    background-color: #ccc; /* Color opaco */
+    color: #999; /* Texto deshabilitado */
+    cursor: not-allowed; /* Icono de no permitido */
+    opacity: 0.6; /* Reduce la opacidad */
+}
+
+.disabled-button:hover {
+    background-color: #ccc; /* Sin efecto hover */
+}
